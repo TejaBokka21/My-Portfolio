@@ -69,6 +69,15 @@ const Index = () => {
     { name: 'CSS/HTML', level: 90 },
     { name: 'Git', level: 85 }
   ];
+  const downloadResume = () => {
+    // Create a link element and trigger download
+    const link = document.createElement('a');
+    link.href = '/resume.pdf'; // Path to the resume file in public folder
+    link.download = 'Mohan_Boddu_Resume.pdf'; // Name for the downloaded file
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   const projects = [
    {
@@ -138,11 +147,22 @@ const Index = () => {
             </p>
           </div>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <button className="glass-button group">
+          <section id="resume" className="py-20 px-6 fade-in-section">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+            Resume
+          </h2>
+          
+          <div className="glass-card p-8 mb-8">
+            <p className="text-gray-300 text-lg mb-8">
+              Download my complete resume to learn more about my experience, education, and technical skills.
+            </p>
+            
+            <button onClick={downloadResume} className="glass-button group mb-8">
               <Download size={20} className="group-hover:animate-bounce" />
-              Download Resume
+              Download Full Resume
             </button>
+            
             
             <button 
               onClick={() => scrollToSection('contact')}
