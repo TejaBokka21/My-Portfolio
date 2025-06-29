@@ -76,7 +76,6 @@ const Index = () => {
     { name: 'HTML/CSS', level: 95 },
     { name: 'JavaScript', level: 85 },
     { name: 'Python', level: 80 },
-    { name: 'CSS/HTML', level: 90 },
     { name: 'Git', level: 85 }
   ];
 
