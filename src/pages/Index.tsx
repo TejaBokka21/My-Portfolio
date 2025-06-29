@@ -61,6 +61,16 @@ const Index = () => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const downloadResume = () => {
+    // Create a link element and trigger download
+    const link = document.createElement('a');
+    link.href = '/resume.pdf'; // Path to the resume file in public folder
+    link.download = 'Mohan_Boddu_Resume.pdf'; // Name for the downloaded file
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   const skills = [
     { name: 'Angular', level: 80 },
     { name: 'HTML/CSS', level: 95 },
@@ -139,11 +149,10 @@ const Index = () => {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <button className="glass-button group">
+            <button onClick={downloadResume} className="glass-button group">
               <Download size={20} className="group-hover:animate-bounce" />
               Download Resume
             </button>
-            
             
             <button 
               onClick={() => scrollToSection('contact')}
@@ -267,7 +276,7 @@ const Index = () => {
               Download my complete resume to learn more about my experience, education, and technical skills.
             </p>
             
-            <button className="glass-button group mb-8">
+            <button onClick={downloadResume} className="glass-button group mb-8">
               <Download size={20} className="group-hover:animate-bounce" />
               Download Full Resume
             </button>
