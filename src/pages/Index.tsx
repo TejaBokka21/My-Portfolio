@@ -72,7 +72,7 @@ const Index = () => {
   const downloadResume = () => {
     // Create a link element and trigger download
     const link = document.createElement('a');
-    link.href = '/resume.pdf'; // Path to the resume file in public folder
+    link.href = '/resume18.pdf'; 
     link.download = 'Mohan_Boddu_Resume.pdf'; // Name for the downloaded file
     document.body.appendChild(link);
     link.click();
