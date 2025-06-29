@@ -74,7 +74,7 @@ const Index = () => {
    {
       title: 'Lottery-Game',
       description: 'It is a Frontend Application and it is developed with HTML , CSS , JavaScript. It is a fun way to Develop a DOM manupulation.',
-      image: 'src/Lottery.png.png',
+      image: '/placeholder.svg',
       liveLink: 'https://lottery-game-web.netlify.app/',
       githubLink: 'https://github.com/Mohanboddu18/lottery-game',
       tech: ['HTML', 'CSS', 'JavaScript']
@@ -83,8 +83,8 @@ const Index = () => {
       title: 'Expense-Tracker',
       description: 'Expense Tracker is a simple web app built using HTML and CSS that allows users to log and monitor their daily spending.',
       image: '/placeholder.svg',
-      liveLink: '#',
-      githubLink: '#',
+      liveLink: 'https://expense-tracker-web1.netlify.app/',
+      githubLink: 'https://github.com/Mohanboddu18/Exppense-tracker',
       tech: ['HTML', 'CSS']
     }
   ];
@@ -143,19 +143,6 @@ const Index = () => {
               <Download size={20} className="group-hover:animate-bounce" />
               Download Resume
             </button>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <a
-              href="/resume18.pdf"
-              download
-              className="glass-button group flex items-center gap-2"
-            >
-              <Download size={20} className="group-hover:animate-bounce" />
-              Download Resume
-            </a>
-          </div>
-
-
             
             <button 
               onClick={() => scrollToSection('contact')}
@@ -184,8 +171,8 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="glass-card p-8">
               <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                I'm a passionate full-stack developer with over 3 years of experience creating innovative web solutions. 
-                I specialize in building scalable applications using modern technologies like React, Node.js, and cloud platforms.
+                I'm a passionate tech developer with a strong foundation in web development and modern programming tools.
+                 I actively build personal projects to sharpen my skills and stay updated with the latest technologies.
               </p>
               <p className="text-gray-300 text-lg leading-relaxed mb-6">
                 My journey in tech began with a curiosity for problem-solving and has evolved into a career focused on 
@@ -286,15 +273,15 @@ const Index = () => {
             
             <div className="grid md:grid-cols-2 gap-8 text-left">
               <div>
-                <h3 className="text-xl font-bold mb-4 text-cyan-400">Experience Highlights</h3>
+                <h3 className="text-xl font-bold mb-4 text-cyan-400">Highlights</h3>
                 <ul className="space-y-3 text-gray-300">
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
-                    <span>3+ years in full-stack development</span>
+                    <span>Pythhon Full Stack Developer</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
-                    <span>Led development of 10+ web applications</span>
+                    <span>Led development of 5+ web applications</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
@@ -316,7 +303,7 @@ const Index = () => {
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
-                    <span>Google Cloud Professional</span>
+                    <span>AICTE , Eduskills Certified Python Developer</span> 
                   </li>
                 </ul>
               </div>
@@ -343,26 +330,26 @@ const Index = () => {
               <div className="space-y-4">
                 <div className="flex items-center gap-4 text-gray-300">
                   <Mail className="text-cyan-400" size={20} />
-                  <span>mohan.boddu@email.com</span>
+                  <span>mohanboddu18@gmail.com</span>
                 </div>
                 <div className="flex items-center gap-4 text-gray-300">
                   <Phone className="text-cyan-400" size={20} />
-                  <span>+1 (555) 123-4567</span>
+                  <span>+91 7997102207</span>
                 </div>
                 <div className="flex items-center gap-4 text-gray-300">
                   <MapPin className="text-cyan-400" size={20} />
-                  <span>San Francisco, CA</span>
+                  <span>Narsapur, AP</span>
                 </div>
               </div>
               
               <div className="flex gap-4 mt-8">
-                <a href="#" className="social-icon">
+                <a href="https://www.linkedin.com/in/mohan-boddu-5653a1321" className="social-icon">
                   <Linkedin size={24} />
                 </a>
-                <a href="#" className="social-icon">
+                <a href="https://github.com/Mohanboddu18" className="social-icon">
                   <Github size={24} />
                 </a>
-                <a href="#" className="social-icon">
+                <a href="mohanboddu@gmail.com" className="social-icon">
                   <Mail size={24} />
                 </a>
               </div>
