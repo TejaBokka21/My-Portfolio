@@ -143,6 +143,20 @@ const Index = () => {
               <Download size={20} className="group-hover:animate-bounce" />
               Download Resume
             </button>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <a
+              href="/resume18.pdf"
+              download
+              className="glass-button group flex items-center gap-2"
+            >
+              <Download size={20} className="group-hover:animate-bounce" />
+              Download Resume
+            </a>
+          </div>
+
+
+            
             <button 
               onClick={() => scrollToSection('contact')}
               className="glass-button-secondary group"
