@@ -69,6 +69,7 @@ const Index = () => {
     { name: 'CSS/HTML', level: 90 },
     { name: 'Git', level: 85 }
   ];
+
   const projects = [
    {
       title: 'Lottery-Game',
@@ -137,20 +138,10 @@ const Index = () => {
             </p>
           </div>
           
-          <section id="resume" className="py-20 px-6 fade-in-section">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-            Resume
-          </h2>
-          
-          <div className="glass-card p-8 mb-8">
-            <p className="text-gray-300 text-lg mb-8">
-              Download my complete resume to learn more about my experience, education, and technical skills.
-            </p>
-            
-            <button onClick={downloadResume} className="glass-button group mb-8">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <button className="glass-button group">
               <Download size={20} className="group-hover:animate-bounce" />
-              Download Full Resume
+              Download Resume
             </button>
             
             
