@@ -62,48 +62,30 @@ const Index = () => {
   };
 
   const skills = [
-    { name: 'React', level: 90 },
-    { name: 'Node.js', level: 85 },
-    { name: 'JavaScript', level: 95 },
+    { name: 'Angular', level: 80 },
+    { name: 'HTML/CSS', level: 95 },
+    { name: 'JavaScript', level: 85 },
     { name: 'Python', level: 80 },
-    { name: 'MongoDB', level: 75 },
-    { name: 'TypeScript', level: 85 },
     { name: 'CSS/HTML', level: 90 },
     { name: 'Git', level: 85 }
   ];
 
   const projects = [
-    {
-      title: 'E-Commerce Platform',
-      description: 'Full-stack e-commerce solution with React, Node.js, and MongoDB. Features include user authentication, payment integration, and admin dashboard.',
+   {
+      title: 'Lottery-Game',
+      description: 'It is a Frontend Application and it is developed with HTML , CSS , JavaScript. It is a fun way to Develop a DOM manupulation.',
       image: '/placeholder.svg',
       liveLink: '#',
       githubLink: '#',
-      tech: ['React', 'Node.js', 'MongoDB', 'Stripe']
+      tech: ['HTML', 'CSS', 'JavaScript']
     },
     {
-      title: 'Task Management App',
-      description: 'Collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.',
+      title: 'Expense-Tracker',
+      description: 'Expense Tracker is a simple web app built using HTML and CSS that allows users to log and monitor their daily spending.',
       image: '/placeholder.svg',
       liveLink: '#',
       githubLink: '#',
-      tech: ['React', 'Socket.io', 'Express', 'PostgreSQL']
-    },
-    {
-      title: 'Weather Analytics Dashboard',
-      description: 'Interactive weather dashboard with data visualization, forecasting, and location-based weather tracking using external APIs.',
-      image: '/placeholder.svg',
-      liveLink: '#',
-      githubLink: '#',
-      tech: ['Vue.js', 'D3.js', 'Python', 'FastAPI']
-    },
-    {
-      title: 'Social Media API',
-      description: 'RESTful API for social media platform with user management, post creation, real-time messaging, and content moderation.',
-      image: '/placeholder.svg',
-      liveLink: '#',
-      githubLink: '#',
-      tech: ['Node.js', 'Express', 'MongoDB', 'JWT']
+      tech: ['HTML', 'CSS']
     }
   ];
 
