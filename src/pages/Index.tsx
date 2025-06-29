@@ -69,16 +69,6 @@ const Index = () => {
     { name: 'CSS/HTML', level: 90 },
     { name: 'Git', level: 85 }
   ];
-  const downloadResume = () => {
-    // Create a link element and trigger download
-    const link = document.createElement('a');
-    link.href = '/resume18.pdf'; 
-    link.download = 'Mohan_Boddu_Resume.pdf'; // Name for the downloaded file
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
-
   const projects = [
    {
       title: 'Lottery-Game',
