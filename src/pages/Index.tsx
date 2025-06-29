@@ -75,8 +75,8 @@ const Index = () => {
       title: 'Lottery-Game',
       description: 'It is a Frontend Application and it is developed with HTML , CSS , JavaScript. It is a fun way to Develop a DOM manupulation.',
       image: '/placeholder.svg',
-      liveLink: '#',
-      githubLink: '#',
+      liveLink: 'https://lottery-game-web.netlify.app/',
+      githubLink: 'https://github.com/Mohanboddu18/lottery-game',
       tech: ['HTML', 'CSS', 'JavaScript']
     },
     {
