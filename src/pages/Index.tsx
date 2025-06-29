@@ -185,12 +185,10 @@ const Index = () => {
               </p>
               <p className="text-gray-300 text-lg leading-relaxed mb-6">
                 My journey in tech began with a curiosity for problem-solving and has evolved into a career focused on 
-                creating sustainable, efficient, and user-centric digital experiences. I believe in writing clean code 
-                and staying updated with the latest industry trends.
+                creating sustainable, efficient, and user-centric digital experiences. 
               </p>
               <p className="text-gray-300 text-lg leading-relaxed">
-                When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, 
-                or sharing knowledge with the tech community.
+                I believe in writing clean code and staying updated with the latest industry trends.
               </p>
             </div>
             
