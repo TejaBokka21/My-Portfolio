@@ -277,7 +277,7 @@ const Index = () => {
                 <ul className="space-y-3 text-gray-300">
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
-                    <span>Pythhon Full Stack Developer</span>
+                    <span>Python Full Stack Developer</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
@@ -349,7 +349,7 @@ const Index = () => {
                 <a href="https://github.com/Mohanboddu18" className="social-icon">
                   <Github size={24} />
                 </a>
-                <a href="mohanboddu@gmail.com" className="social-icon">
+                <a href="mailto:mohanboddu@gmail.com" className="social-icon">
                   <Mail size={24} />
                 </a>
               </div>
