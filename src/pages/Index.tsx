@@ -74,7 +74,7 @@ const Index = () => {
    {
       title: 'Lottery-Game',
       description: 'It is a Frontend Application and it is developed with HTML , CSS , JavaScript. It is a fun way to Develop a DOM manupulation.',
-      image: '/placeholder.svg',
+      image: '/Lottery.png',
       liveLink: 'https://lottery-game-web.netlify.app/',
       githubLink: 'https://github.com/Mohanboddu18/lottery-game',
       tech: ['HTML', 'CSS', 'JavaScript']
@@ -82,7 +82,7 @@ const Index = () => {
     {
       title: 'Expense-Tracker',
       description: 'Expense Tracker is a simple web app built using HTML and CSS that allows users to log and monitor their daily spending.',
-      image: '/placeholder.svg',
+      image: '/Expense.png',
       liveLink: 'https://expense-tracker-web1.netlify.app/',
       githubLink: 'https://github.com/Mohanboddu18/Exppense-tracker',
       tech: ['HTML', 'CSS']
