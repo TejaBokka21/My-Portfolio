@@ -405,18 +405,18 @@ const Index = () => {
 
               <div className="flex gap-4 mt-8">
                 <a
-                  href="https://www.linkedin.com/in/mohan-boddu-5653a1321"
+                  href="https://www.linkedin.com/in/teja-bokka-500390306/"
                   className="social-icon"
                 >
                   <Linkedin size={24} />
                 </a>
-                <a
-                  href="https://github.com/Mohanboddu18"
-                  className="social-icon"
-                >
+                <a href="https://github.com/TejaYT" className="social-icon">
                   <Github size={24} />
                 </a>
-                <a href="mailto:mohanboddu@gmail.com" className="social-icon">
+                <a
+                  href="mailto:bokkateja2006@gmail.com"
+                  className="social-icon"
+                >
                   <Mail size={24} />
                 </a>
               </div>
