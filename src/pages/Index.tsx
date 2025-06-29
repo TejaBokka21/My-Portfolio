@@ -63,9 +63,10 @@ const Index = () => {
 
   const skills = [
     { name: 'Angular', level: 80 },
-    { name: 'CSS/HTML', level: 95 },
+    { name: 'HTML/CSS', level: 95 },
     { name: 'JavaScript', level: 85 },
     { name: 'Python', level: 80 },
+    { name: 'CSS/HTML', level: 90 },
     { name: 'Git', level: 85 }
   ];
 
@@ -137,16 +138,12 @@ const Index = () => {
             </p>
           </div>
           
-          <a
-            href="/resume18.pdf"
-            download
-            className="glass-button group mb-8 inline-flex items-center gap-2"
-          >
-            <Download size={20} className="group-hover:animate-bounce" />
-            Download Full Resume
-          </a>
-
-
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <button className="glass-button group">
+              <Download size={20} className="group-hover:animate-bounce" />
+              Download Resume
+            </button>
+            
             <button 
               onClick={() => scrollToSection('contact')}
               className="glass-button-secondary group"
