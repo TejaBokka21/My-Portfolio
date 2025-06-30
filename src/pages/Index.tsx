@@ -1,19 +1,33 @@
-import React, { useEffect, useState } from 'react';
-import { ChevronDown, Download, ExternalLink, Github, Linkedin, Mail, MapPin, Phone } from 'lucide-react';
+import React, { useEffect, useState } from "react";
+import {
+  ChevronDown,
+  Download,
+  ExternalLink,
+  Github,
+  Linkedin,
+  Mail,
+  MapPin,
+  Phone,
+} from "lucide-react";
 
 const Index = () => {
-  const [activeSection, setActiveSection] = useState('home');
-  const [typedText, setTypedText] = useState('');
+  const [activeSection, setActiveSection] = useState("home");
+  const [typedText, setTypedText] = useState("");
   const [isTyping, setIsTyping] = useState(true);
-  
-  const roles = ['Full Stack Developer', 'Tech Innovator', 'Problem Solver', 'Code Architect'];
+
+  const roles = [
+    "Full Stack Developer",
+    "Tech Innovator",
+    "Problem Solver",
+    "Code Architect",
+  ];
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
 
   // Typing animation effect
   useEffect(() => {
     const currentRole = roles[currentRoleIndex];
     let currentIndex = 0;
-    
+
     if (isTyping) {
       const typingInterval = setInterval(() => {
         if (currentIndex <= currentRole.length) {
@@ -23,13 +37,13 @@ const Index = () => {
           setIsTyping(false);
           setTimeout(() => {
             setCurrentRoleIndex((prev) => (prev + 1) % roles.length);
-            setTypedText('');
+            setTypedText("");
             setIsTyping(true);
           }, 2000);
           clearInterval(typingInterval);
         }
       }, 100);
-      
+
       return () => clearInterval(typingInterval);
     }
   }, [currentRoleIndex, isTyping]);
@@ -38,33 +52,33 @@ const Index = () => {
   useEffect(() => {
     const observerOptions = {
       threshold: 0.1,
-      rootMargin: '0px 0px -10% 0px'
+      rootMargin: "0px 0px -10% 0px",
     };
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('animate-in');
+          entry.target.classList.add("animate-in");
           setActiveSection(entry.target.id);
         }
       });
     }, observerOptions);
 
-    const sections = document.querySelectorAll('section[id]');
+    const sections = document.querySelectorAll("section[id]");
     sections.forEach((section) => observer.observe(section));
 
     return () => observer.disconnect();
   }, []);
 
   const scrollToSection = (sectionId: string) => {
-    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
   };
 
   const downloadResume = () => {
     // Create a link element and trigger download
-    const link = document.createElement('a');
-    link.href = '/Teja_Resume.pdf'; // Path to the resume file in public folder
-    link.download = 'Teja_Resume.pdf'; // Name for the downloaded file
+    const link = document.createElement("a");
+    link.href = "/Teja_Resume.pdf"; // Path to the resume file in public folder
+    link.download = "Teja_Resume.pdf"; // Name for the downloaded file
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -72,43 +86,47 @@ const Index = () => {
 
   const openGoogleDriveLink = (url: string) => {
     // Only open if it's a valid Google Drive URL, otherwise do nothing
-    if (url && url.includes('drive.google.com')) {
-      window.open(url, '_blank', 'noopener,noreferrer');
+    if (url && url.includes("drive.google.com")) {
+      window.open(url, "_blank", "noopener,noreferrer");
     }
     // For placeholder URLs, do nothing to prevent navigation
   };
 
   const skills = [
-    { name: 'Angular', level: 80 },
-    { name: 'HTML/CSS', level: 95 },
-    { name: 'JavaScript', level: 85 },
-    { name: 'Python', level: 80 },
-    { name: 'Git', level: 85 }
+    { name: "Angular", level: 80 },
+    { name: "HTML/CSS", level: 95 },
+    { name: "JavaScript", level: 85 },
+    { name: "Python", level: 80 },
+    { name: "Git", level: 85 },
   ];
 
   const projects = [
-   {
-      title: 'Lottery-Game',
-      description: 'It is a Frontend Application and it is developed with HTML , CSS , JavaScript. It is a fun way to Develop a DOM manupulation.',
-      image: '/Lottery.svg.png',
-      liveLink: 'https://l0tterygame.netlify.app/',
-      githubLink: 'https://github.com/TejaYT/Lottery-Game',
-      tech: ['HTML', 'CSS', 'JavaScript']
+    {
+      title: "Lottery-Game",
+      description:
+        "It is a Frontend Application and it is developed with HTML , CSS , JavaScript. It is a fun way to Develop a DOM manupulation.",
+      image: "/Lottery.svg.png",
+      liveLink: "https://l0tterygame.netlify.app/",
+      githubLink: "https://github.com/TejaYT/Lottery-Game",
+      tech: ["HTML", "CSS", "JavaScript"],
     },
     {
-      title: 'Expense-Tracker',
-      description: 'Expense Tracker is a simple web app built using HTML and CSS that allows users to log and monitor their daily spending.',
-      image: '/Expense.svg.png',
-      liveLink: 'https://expense-t-racker.netlify.app/',
-      githubLink: 'https://github.com/TejaYT/Expense-Tracker',
-      tech: ['HTML', 'CSS','JavaScript']
-    }
+      title: "Expense-Tracker",
+      description:
+        "Expense Tracker is a simple web app built using HTML and CSS that allows users to log and monitor their daily spending.",
+      image: "/Expense.svg.png",
+      liveLink: "https://expense-t-racker.netlify.app/",
+      githubLink: "https://github.com/TejaYT/Expense-Tracker",
+      tech: ["HTML", "CSS"],
+    },
   ];
 
   // Education and Certification links
   const educationLinks = {
-    awsCert: 'https://drive.google.com/file/d/1v9vHf92x_-1vwwpfSavKEVI3nz7BiKlf/view?usp=sharing',
-    pythonCert: 'https://drive.google.com/file/d/1LFqAkvKabcPOA8awqt_WqYo347KAm0hs/view?usp=sharing'
+    awsCert:
+      "https://drive.google.com/file/d/1v9vHf92x_-1vwwpfSavKEVI3nz7BiKlf/view?usp=sharing",
+    pythonCert:
+      "https://drive.google.com/file/d/1LFqAkvKabcPOA8awqt_WqYo347KAm0hs/view?usp=sharing",
   };
 
   return (
@@ -129,24 +147,31 @@ const Index = () => {
                 TB
               </div>
               <div className="hidden md:flex space-x-8">
-                {['home', 'about', 'projects', 'resume', 'contact'].map((section) => (
-                  <button
-                    key={section}
-                    onClick={() => scrollToSection(section)}
-                    className={`capitalize transition-all duration-300 hover:text-cyan-400 ${
-                      activeSection === section ? 'text-cyan-400 border-b-2 border-cyan-400' : 'text-white/80'
-                    }`}
-                  >
-                    {section}
-                  </button>
-                ))}
+                {["home", "about", "projects", "resume", "contact"].map(
+                  (section) => (
+                    <button
+                      key={section}
+                      onClick={() => scrollToSection(section)}
+                      className={`capitalize transition-all duration-300 hover:text-cyan-400 ${
+                        activeSection === section
+                          ? "text-cyan-400 border-b-2 border-cyan-400"
+                          : "text-white/80"
+                      }`}
+                    >
+                      {section}
+                    </button>
+                  )
+                )}
               </div>
             </div>
           </div>
         </nav>
 
         {/* Hero Section */}
-        <section id="home" className="min-h-screen flex items-center justify-center relative px-6 fade-in-section">
+        <section
+          id="home"
+          className="min-h-screen flex items-center justify-center relative px-6 fade-in-section"
+        >
           <div className="text-center max-w-4xl mx-auto">
             <div className="mb-8">
               <h1 className="text-6xl md:text-8xl font-bold mb-4 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-gradient">
@@ -160,23 +185,23 @@ const Index = () => {
                 Building Sustainable & Smart Web Solutions
               </p>
             </div>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <button onClick={downloadResume} className="glass-button group">
                 <Download size={20} className="group-hover:animate-bounce" />
                 Download Resume
               </button>
-              
-              <button 
-                onClick={() => scrollToSection('contact')}
+
+              <button
+                onClick={() => scrollToSection("contact")}
                 className="glass-button-secondary group"
               >
                 Get In Touch
               </button>
             </div>
-            
-            <div 
-              onClick={() => scrollToSection('about')}
+
+            <div
+              onClick={() => scrollToSection("about")}
               className="absolute bottom-8 left-1/2 transform -translate-x-1/2 cursor-pointer animate-bounce"
             >
               <ChevronDown size={32} className="text-cyan-400" />
@@ -190,35 +215,43 @@ const Index = () => {
             <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
               About Me
             </h2>
-            
+
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="glass-card p-8">
                 <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                  I'm a passionate tech developer with a strong foundation in web development and modern programming tools.
-                   I actively build personal projects to sharpen my skills and stay updated with the latest technologies.
+                  I'm a passionate tech developer with a strong foundation in
+                  web development and modern programming tools. I actively build
+                  personal projects to sharpen my skills and stay updated with
+                  the latest technologies.
                 </p>
                 <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                  My journey in tech began with a curiosity for problem-solving and has evolved into a career focused on 
-                  creating sustainable, efficient, and user-centric digital experiences. 
+                  My journey in tech began with a curiosity for problem-solving
+                  and has evolved into a career focused on creating sustainable,
+                  efficient, and user-centric digital experiences.
                 </p>
                 <p className="text-gray-300 text-lg leading-relaxed">
-                  I believe in writing clean code and staying updated with the latest industry trends.
+                  I believe in writing clean code and staying updated with the
+                  latest industry trends.
                 </p>
               </div>
-              
+
               <div className="glass-card p-8">
-                <h3 className="text-2xl font-bold mb-6 text-cyan-400">Skills & Technologies</h3>
+                <h3 className="text-2xl font-bold mb-6 text-cyan-400">
+                  Skills & Technologies
+                </h3>
                 <div className="space-y-4">
                   {skills.map((skill) => (
                     <div key={skill.name} className="skill-item">
                       <div className="flex justify-between mb-2">
-                        <span className="text-white font-medium">{skill.name}</span>
+                        <span className="text-white font-medium">
+                          {skill.name}
+                        </span>
                         <span className="text-cyan-400">{skill.level}%</span>
                       </div>
                       <div className="w-full bg-gray-700 rounded-full h-2">
-                        <div 
+                        <div
                           className="bg-gradient-to-r from-cyan-400 to-purple-400 h-2 rounded-full transition-all duration-1000 ease-out"
-                          style={{ width: ${skill.level}% }}
+                          style={{ width: `${skill.level}%` }}
                         ></div>
                       </div>
                     </div>
@@ -235,36 +268,49 @@ const Index = () => {
             <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
               Featured Projects
             </h2>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               {projects.map((project, index) => (
                 <div key={index} className="project-card glass-card p-6 group">
                   <div className="relative overflow-hidden rounded-lg mb-6">
-                    <img 
-                      src={project.image} 
+                    <img
+                      src={project.image}
                       alt={project.title}
                       className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </div>
-                  
-                  <h3 className="text-xl font-bold mb-3 text-cyan-400">{project.title}</h3>
-                  <p className="text-gray-300 mb-4 leading-relaxed">{project.description}</p>
-                  
+
+                  <h3 className="text-xl font-bold mb-3 text-cyan-400">
+                    {project.title}
+                  </h3>
+                  <p className="text-gray-300 mb-4 leading-relaxed">
+                    {project.description}
+                  </p>
+
                   <div className="flex flex-wrap gap-2 mb-6">
                     {project.tech.map((tech) => (
-                      <span key={tech} className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm border border-purple-500/30">
+                      <span
+                        key={tech}
+                        className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm border border-purple-500/30"
+                      >
                         {tech}
                       </span>
                     ))}
                   </div>
-                  
+
                   <div className="flex gap-4">
-                    <a href={project.liveLink} className="flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors">
+                    <a
+                      href={project.liveLink}
+                      className="flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors"
+                    >
                       <ExternalLink size={16} />
                       Live Demo
                     </a>
-                    <a href={project.githubLink} className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
+                    <a
+                      href={project.githubLink}
+                      className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
+                    >
                       <Github size={16} />
                       Source Code
                     </a>
@@ -281,20 +327,26 @@ const Index = () => {
             <h2 className="text-4xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
               Resume
             </h2>
-            
+
             <div className="glass-card p-8 mb-8">
               <p className="text-gray-300 text-lg mb-8">
-                Download my complete resume to learn more about my experience, education, and technical skills.
+                Download my complete resume to learn more about my experience,
+                education, and technical skills.
               </p>
-              
-              <button onClick={downloadResume} className="glass-button group mb-8">
+
+              <button
+                onClick={downloadResume}
+                className="glass-button group mb-8"
+              >
                 <Download size={20} className="group-hover:animate-bounce" />
                 Download Full Resume
               </button>
-              
+
               <div className="grid md:grid-cols-2 gap-8 text-left">
                 <div>
-                  <h3 className="text-xl font-bold mb-4 text-cyan-400">Highlights</h3>
+                  <h3 className="text-xl font-bold mb-4 text-cyan-400">
+                    Highlights
+                  </h3>
                   <ul className="space-y-3 text-gray-300">
                     <li className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
@@ -310,20 +362,22 @@ const Index = () => {
                     </li>
                   </ul>
                 </div>
-                
+
                 <div>
-                  <h3 className="text-xl font-bold mb-4 text-purple-400">Education & Certifications</h3>
+                  <h3 className="text-xl font-bold mb-4 text-purple-400">
+                    Education & Certifications
+                  </h3>
                   <ul className="space-y-3 text-gray-300">
                     <li className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
-                      <button 
+                      <button
                         onClick={(e) => {
                           e.preventDefault();
                           e.stopPropagation();
                           openGoogleDriveLink(educationLinks.degree);
                         }}
                         className="text-left hover:text-purple-300 transition-colors cursor-pointer bg-transparent border-none p-0 m-0"
-                        style={{ textDecoration: 'none' }}
+                        style={{ textDecoration: "none" }}
                         type="button"
                       >
                         Bachelor's in Computer Science
@@ -331,14 +385,14 @@ const Index = () => {
                     </li>
                     <li className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
-                      <button 
+                      <button
                         onClick={(e) => {
                           e.preventDefault();
                           e.stopPropagation();
                           openGoogleDriveLink(educationLinks.awsCert);
                         }}
                         className="text-left hover:text-purple-300 transition-colors cursor-pointer bg-transparent border-none p-0 m-0"
-                        style={{ textDecoration: 'none' }}
+                        style={{ textDecoration: "none" }}
                         type="button"
                       >
                         AWS Certified Developer
@@ -346,14 +400,14 @@ const Index = () => {
                     </li>
                     <li className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
-                      <button 
+                      <button
                         onClick={(e) => {
                           e.preventDefault();
                           e.stopPropagation();
                           openGoogleDriveLink(educationLinks.pythonCert);
                         }}
                         className="text-left hover:text-purple-300 transition-colors cursor-pointer bg-transparent border-none p-0 m-0"
-                        style={{ textDecoration: 'none' }}
+                        style={{ textDecoration: "none" }}
                         type="button"
                       >
                         AICTE , Eduskills Certified Python Developer
@@ -372,15 +426,18 @@ const Index = () => {
             <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
               Get In Touch
             </h2>
-            
+
             <div className="grid md:grid-cols-2 gap-12">
               <div className="glass-card p-8">
-                <h3 className="text-2xl font-bold mb-6 text-cyan-400">Let's Connect</h3>
+                <h3 className="text-2xl font-bold mb-6 text-cyan-400">
+                  Let's Connect
+                </h3>
                 <p className="text-gray-300 mb-8 leading-relaxed">
-                  I'm always open to discussing new opportunities, interesting projects, or just having a chat about technology. 
-                  Feel free to reach out!
+                  I'm always open to discussing new opportunities, interesting
+                  projects, or just having a chat about technology. Feel free to
+                  reach out!
                 </p>
-                
+
                 <div className="space-y-4">
                   <div className="flex items-center gap-4 text-gray-300">
                     <Mail className="text-cyan-400" size={20} />
@@ -395,52 +452,67 @@ const Index = () => {
                     <span>Narsapur, AP</span>
                   </div>
                 </div>
-                
+
                 <div className="flex gap-4 mt-8">
-                  <a href="https://www.linkedin.com/in/teja-bokka-500390306/" className="social-icon">
+                  <a
+                    href="https://www.linkedin.com/in/teja-bokka-500390306/"
+                    className="social-icon"
+                  >
                     <Linkedin size={24} />
                   </a>
-                  <a href="https://github.com/TejaBokka21" className="social-icon">
+                  <a
+                    href="https://github.com/TejaBokka21"
+                    className="social-icon"
+                  >
                     <Github size={24} />
                   </a>
-                  <a href="mailto:bokkateja2006@gmail.com" className="social-icon">
+                  <a
+                    href="mailto:bokkateja2006@gmail.com"
+                    className="social-icon"
+                  >
                     <Mail size={24} />
                   </a>
                 </div>
               </div>
-              
               <form className="glass-card p-8 space-y-6">
                 <div>
-                  <label className="block text-sm font-medium mb-2 text-gray-300">Name</label>
-                  <input 
-                    type="text" 
+                  <label className="block text-sm font-medium mb-2 text-gray-300">
+                    Name
+                  </label>
+                  <input
+                    type="text"
                     className="glass-input w-full"
                     placeholder="Your name"
                   />
                 </div>
-                
+
                 <div>
-                  <label className="block text-sm font-medium mb-2 text-gray-300">Email</label>
-                  <input 
-                    type="email" 
+                  <label className="block text-sm font-medium mb-2 text-gray-300">
+                    Email
+                  </label>
+                  <input
+                    type="email"
                     className="glass-input w-full"
                     placeholder="your.email@example.com"
                   />
                 </div>
-                
+
                 <div>
-                  <label className="block text-sm font-medium mb-2 text-gray-300">Message</label>
-                  <textarea 
-                    rows={5} 
+                  <label className="block text-sm font-medium mb-2 text-gray-300">
+                    Message
+                  </label>
+                  <textarea
+                    rows={5}
                     className="glass-input w-full resize-none"
                     placeholder="Tell me about your project or just say hi!"
                   ></textarea>
                 </div>
-                
+
                 <button type="submit" className="glass-button w-full">
                   Send Message
                 </button>
               </form>
+              cd
             </div>
           </div>
         </section>
@@ -449,7 +521,7 @@ const Index = () => {
         <footer className="py-8 px-6 border-t border-white/10 backdrop-blur-lg">
           <div className="max-w-7xl mx-auto text-center">
             <p className="text-gray-400">
-              © 2024 Teja Bokka. Built with passion and modern technologies.
+              © 2025 Teja Bokka. Built with passion and modern technologies.
             </p>
           </div>
         </footer>
