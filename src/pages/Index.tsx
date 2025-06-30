@@ -512,7 +512,6 @@ const Index = () => {
                   Send Message
                 </button>
               </form>
-              cd
             </div>
           </div>
         </section>
