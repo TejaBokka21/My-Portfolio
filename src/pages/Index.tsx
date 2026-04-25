@@ -77,8 +77,8 @@ const Index = () => {
   const downloadResume = () => {
     // Create a link element and trigger download
     const link = document.createElement("a");
-    link.href = "/Teja_Java_Resume"; // Path to the resume file in public folder
-    link.download = "Teja_Java_Resume.pdf"; // Name for the downloaded file
+    link.href = "/Teja_Resume.pdf"; // Path to the resume file in public folder
+    link.download = "Teja_Resume.pdf"; // Name for the downloaded file
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -96,7 +96,9 @@ const Index = () => {
     { name: "Angular", level: 80 },
     { name: "HTML/CSS", level: 95 },
     { name: "JavaScript", level: 85 },
-    { name: "Java", level: 80 },
+    { name: "SQL", level: 80 },
+    { name: "Java", level: 90 },
+    { name: "SpringBoot", level: 80 },
     { name: "Git", level: 85 },
   ];
 
@@ -119,6 +121,15 @@ const Index = () => {
       githubLink: "https://github.com/TejaYT/Expense-Tracker",
       tech: ["HTML", "CSS"],
     },
+    {
+      title: "Angular-Ekart",
+      description:
+        "Angular Ekart is a fully responsive e-commerce web application built using Angular and TypeScript, featuring dynamic product listings, real-time filtering, and optimized performance for a smooth user experience.",
+      image: "/ekart.svg.png", // make sure this image exists in public folder
+      liveLink: "https://ekart-website.netlify.app/",
+      githubLink: "https://github.com/TejaBokka21/Angular_Ekart",
+      tech: ["Angular", "TypeScript", "HTML", "CSS"],
+    },
   ];
 
   // Education and Certification links
@@ -127,6 +138,12 @@ const Index = () => {
       "https://drive.google.com/file/d/1v9vHf92x_-1vwwpfSavKEVI3nz7BiKlf/view?usp=sharing",
     pythonCert:
       "https://drive.google.com/file/d/1LFqAkvKabcPOA8awqt_WqYo347KAm0hs/view?usp=sharing",
+    javaCert: 
+      "https://drive.google.com/file/d/1pUhSkVrL6bxdo_cbbrcTVWj-1HzjDtLt/view",              
+    salesforceCert: 
+      "https://drive.google.com/file/d/1Qh33prB0thP9xUBlbx3Fq4Wme02PVDnx/view", 
+    degree:
+      "https://drive.google.com/file/d/1nJexYQTzL5xmZ16pVcXuPq8Q-1lCzyCr/view?usp=sharing"
   };
 
   return (
@@ -232,6 +249,11 @@ const Index = () => {
                 <p className="text-gray-300 text-lg leading-relaxed">
                   I believe in writing clean code and staying updated with the
                   latest industry trends.
+                </p>
+                <br/  >
+                <p className="text-gray-300 text-lg leading-relaxed">
+                  I am continuously exploring new technologies and frameworks to build scalable, 
+                  high-performance applications that solve real-world problems.
                 </p>
               </div>
 
@@ -350,15 +372,19 @@ const Index = () => {
                   <ul className="space-y-3 text-gray-300">
                     <li className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Python Full Stack Developer</span>
+                      <span>Java Full Stack Developer</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Led development of 5+ web applications</span>
+                      <span>Wed development of 5+ web applications</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Expertise in modern JavaScript frameworks</span>
+                      <span>Building responsive UIs with Angular.</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
+                      <span>Expertise in Spring Boot backend development.</span>
                     </li>
                   </ul>
                 </div>
@@ -404,13 +430,28 @@ const Index = () => {
                         onClick={(e) => {
                           e.preventDefault();
                           e.stopPropagation();
-                          openGoogleDriveLink(educationLinks.pythonCert);
+                          openGoogleDriveLink(educationLinks.javaCert);
                         }}
                         className="text-left hover:text-purple-300 transition-colors cursor-pointer bg-transparent border-none p-0 m-0"
                         style={{ textDecoration: "none" }}
                         type="button"
                       >
-                        AICTE , Eduskills Certified Python Developer
+                         Java Full Stack Developer Eduskills Certified 
+                      </button>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
+                      <button
+                        onClick={(e) => {
+                          e.preventDefault();
+                          e.stopPropagation();
+                          openGoogleDriveLink(educationLinks.salesforceCert);
+                        }}
+                        className="text-left hover:text-purple-300 transition-colors cursor-pointer bg-transparent border-none p-0 m-0"
+                        style={{ textDecoration: "none" }}
+                        type="button"
+                      >
+                         Salesforce Agentforce Specialist
                       </button>
                     </li>
                   </ul>
