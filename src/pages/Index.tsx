@@ -77,8 +77,8 @@ const Index = () => {
   const downloadResume = () => {
     // Create a link element and trigger download
     const link = document.createElement("a");
-    link.href = "/Teja_Resume.pdf"; // Path to the resume file in public folder
-    link.download = "Teja_Resume.pdf"; // Name for the downloaded file
+    link.href = "/Teja_Java_Developer_Resume.pdf"; // Path to the resume file in public folder
+    link.download = "Teja_Java_Developer_Resume.pdf"; // Name for the downloaded file
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
